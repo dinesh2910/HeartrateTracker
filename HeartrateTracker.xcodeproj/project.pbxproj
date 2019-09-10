@@ -19,6 +19,10 @@
 		B64AD798232742CB00E2F476 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AD797232742CB00E2F476 /* InterfaceController.swift */; };
 		B64AD79A232742CB00E2F476 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AD799232742CB00E2F476 /* ExtensionDelegate.swift */; };
 		B64AD79C232742CC00E2F476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64AD79B232742CC00E2F476 /* Assets.xcassets */; };
+		B64AD7B023274AA000E2F476 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64AD7AF23274AA000E2F476 /* HealthKit.framework */; };
+		B64AD7B223274AAB00E2F476 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64AD7B123274AAB00E2F476 /* HealthKit.framework */; };
+		B64AD7B523274B9700E2F476 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AD7B423274B9700E2F476 /* HealthKitManager.swift */; };
+		B64AD7B72327505900E2F476 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AD7B423274B9700E2F476 /* HealthKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,11 @@
 		B64AD799232742CB00E2F476 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		B64AD79B232742CC00E2F476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B64AD79D232742CC00E2F476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B64AD7AD23274AA000E2F476 /* HeartrateTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeartrateTracker.entitlements; sourceTree = "<group>"; };
+		B64AD7AF23274AA000E2F476 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		B64AD7B123274AAB00E2F476 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		B64AD7B323274AAB00E2F476 /* HeartrateTracker WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HeartrateTracker WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		B64AD7B423274B9700E2F476 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HealthKitManager.swift; path = ../HealthKitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B64AD7B023274AA000E2F476 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B64AD7B223274AAB00E2F476 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +117,9 @@
 				B64AD773232742C800E2F476 /* HeartrateTracker */,
 				B64AD787232742CA00E2F476 /* HeartrateTracker WatchKit App */,
 				B64AD796232742CB00E2F476 /* HeartrateTracker WatchKit Extension */,
+				B64AD7B62327500400E2F476 /* New Group */,
 				B64AD772232742C800E2F476 /* Products */,
+				B64AD7AE23274AA000E2F476 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +136,7 @@
 		B64AD773232742C800E2F476 /* HeartrateTracker */ = {
 			isa = PBXGroup;
 			children = (
+				B64AD7AD23274AA000E2F476 /* HeartrateTracker.entitlements */,
 				B64AD774232742C800E2F476 /* AppDelegate.swift */,
 				B64AD776232742C800E2F476 /* ViewController.swift */,
 				B64AD778232742C800E2F476 /* Main.storyboard */,
@@ -146,12 +160,31 @@
 		B64AD796232742CB00E2F476 /* HeartrateTracker WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B64AD7B323274AAB00E2F476 /* HeartrateTracker WatchKit Extension.entitlements */,
 				B64AD797232742CB00E2F476 /* InterfaceController.swift */,
 				B64AD799232742CB00E2F476 /* ExtensionDelegate.swift */,
 				B64AD79B232742CC00E2F476 /* Assets.xcassets */,
 				B64AD79D232742CC00E2F476 /* Info.plist */,
 			);
 			path = "HeartrateTracker WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		B64AD7AE23274AA000E2F476 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B64AD7B123274AAB00E2F476 /* HealthKit.framework */,
+				B64AD7AF23274AA000E2F476 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B64AD7B62327500400E2F476 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				B64AD7B423274B9700E2F476 /* HealthKitManager.swift */,
+			);
+			name = "New Group";
+			path = "HeartrateTracker WatchKit Extension/New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,12 +255,22 @@
 				TargetAttributes = {
 					B64AD770232742C800E2F476 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					B64AD782232742CA00E2F476 = {
 						CreatedOnToolsVersion = 10.3;
 					};
 					B64AD791232742CB00E2F476 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -288,6 +331,7 @@
 			files = (
 				B64AD777232742C800E2F476 /* ViewController.swift in Sources */,
 				B64AD775232742C800E2F476 /* AppDelegate.swift in Sources */,
+				B64AD7B72327505900E2F476 /* HealthKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +341,7 @@
 			files = (
 				B64AD79A232742CB00E2F476 /* ExtensionDelegate.swift in Sources */,
 				B64AD798232742CB00E2F476 /* InterfaceController.swift in Sources */,
+				B64AD7B523274B9700E2F476 /* HealthKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +508,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "HeartrateTracker WatchKit Extension/HeartrateTracker WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EEGRNAPU89;
 				INFOPLIST_FILE = "HeartrateTracker WatchKit Extension/Info.plist";
@@ -485,6 +531,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "HeartrateTracker WatchKit Extension/HeartrateTracker WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EEGRNAPU89;
 				INFOPLIST_FILE = "HeartrateTracker WatchKit Extension/Info.plist";
@@ -545,6 +592,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HeartrateTracker/HeartrateTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EEGRNAPU89;
 				INFOPLIST_FILE = HeartrateTracker/Info.plist;
@@ -563,6 +611,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HeartrateTracker/HeartrateTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EEGRNAPU89;
 				INFOPLIST_FILE = HeartrateTracker/Info.plist;
